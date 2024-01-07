@@ -52,3 +52,43 @@ Restart the Network Interface:
 nmcli con down "Wired connection 1"
 nmcli con up "Wired connection 1"
 `
+
+## Auto Start:
+
+`sudo nano /etc/systemd/system/yourscript.service
+`
+
+```
+[Unit]
+Description=My Python Script Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/your/app.py
+WorkingDirectory=/path/to/your
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=username
+
+[Install]
+WantedBy=multi-user.target
+```
+
+`sudo systemctl daemon-reload`
+
+`
+sudo systemctl enable yourscript.service
+`
+
+`
+sudo systemctl start yourscript.service
+`
+
+`
+sudo systemctl status yourscript.service
+`
+
+`
+journalctl -u yourscript.service
+`
