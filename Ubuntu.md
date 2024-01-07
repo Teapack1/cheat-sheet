@@ -1,5 +1,5 @@
 ## Linux Ubuntu
-#### Network:
+## Network:
 Network devices overview:
 
 `ip addr`
@@ -14,7 +14,7 @@ Typically, these files are located in /etc/netplan/. The filename might be somet
 
 Modify an entry for your network interface 
 
-`
+```
 network:
   version: 2
   ethernets:
@@ -24,7 +24,7 @@ network:
       gateway4: <your_gateway_ip>
       nameservers:
         addresses: [<dns_ip_1>, <dns_ip_2>]
-`
+```
 
 `
 sudo netplan apply
