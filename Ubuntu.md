@@ -1,5 +1,5 @@
 ## Linux Ubuntu
-## Network:
+## 1  Network:
 Network devices overview:
 
 `ip addr`
@@ -53,7 +53,7 @@ nmcli con down "Wired connection 1"
 nmcli con up "Wired connection 1"
 `
 
-## Auto Start:
+## 2  Auto Start:
 
 `sudo nano /etc/systemd/system/yourscript.service
 `
