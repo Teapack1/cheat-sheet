@@ -1,5 +1,5 @@
-<b><remote>:</b> "origin"<br>
-<b><branch>:</b> "main"<br>
+<b>remote:</b> "origin"<br>
+<b>branch:</b> "main"<br>
 
 ### Local project to existing repo
 
