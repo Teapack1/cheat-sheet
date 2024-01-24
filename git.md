@@ -22,7 +22,7 @@
 -  Show the differences between the staged files and the latest version present:<br>
 `git diff --staged`
 
-### Repos basic
+### Repos
 - Initialize a local Git repository:<br>
 `git init`
 
@@ -37,6 +37,18 @@
 - Commit staged changes:<br>
 `git commit -m "Initial commit"`
 
+- Fetches and merges changes on the remote server to your working directory.<br>
+`git pull <remote>`
+
+-  Pushes all the modified local objects to the remote repository and advances its branches.<br>
+`git push <remote> <branch>`
+
+- Fetch and merge any commits from the tracking remote branch.:<br>
+`git fetch <remote>`
+
+-  Description: Temporarily stores all the modified tracked files.<br>
+`git stash`
+
 ### Branching
 
 - List your branches. A * will appear next to the currently active branch.:<br>
@@ -50,21 +62,6 @@
 
 - Merge the specified branch's history into the current one.:<br>
 `git merge <branch-name>`
-
-### Repo Sync
-
-- Fetches and merges changes on the remote server to your working directory.<br>
-`git pull <remote>`
-
--  Pushes all the modified local objects to the remote repository and advances its branches.<br>
-`git push <remote> <branch>`
-
-- Fetch and merge any commits from the tracking remote branch.:<br>
-`git fetch <remote>`
-
--  Description: Temporarily stores all the modified tracked files.<br>
-`git stash`
-
 
 ### Local project to existing repo
 
