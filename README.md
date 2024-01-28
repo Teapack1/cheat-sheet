@@ -1,2 +1,4 @@
 # TeaPack-CheatSheet
-Python, Tensorflow, Ubuntu, Transformers, Arduino, Raspbrrry Pi
+
+- <b>[Linux](Ubuntu.md)</b>
+- <b>[git](git.md)</b>
