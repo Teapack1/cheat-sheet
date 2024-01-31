@@ -37,6 +37,14 @@ Identify the Connection Name:
 `
 nmcli con show
 `
+See the ports specifications:
+`
+nmcli device show enp2s0
+`</br>
+`
+nmcli device show enp1s0
+`</br>
+
 
 Assuming your connection name is Wired connection 1 
 
@@ -107,4 +115,13 @@ systemctl list-unit-files --type=service --state=enabled
 `</br>
 `
 systemctl list-units --type=service --state=running
+`</br>
+
+### Others
+Unrequire password with "sudo" commands:</br>
+`
+sudo visudo
+`</br>
+`
+linux ALL=(ALL) NOPASSWD: /bin/systemctl start home.service, /bin/systemctl stop home.service
 `</br>
