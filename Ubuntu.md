@@ -60,19 +60,22 @@ nmcli con up "Wired connection 1"
 
 ```
 [Unit]
-Description=My Python Script Service
+Description=Mediapipe
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /path/to/your/app.py
-WorkingDirectory=/path/to/your
+ExecStart=/usr/bin/python3 /home/linux/hand-gesture-control-mediapipe-artnet/app.py
+WorkingDirectory=/home/linux/hand-gesture-control-mediapipe-artnet
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
-User=username
+User=linux
 
 [Install]
 WantedBy=multi-user.target
+
+[Service]
+Environment="DISPLAY=:0"
 ```
 
 `sudo systemctl daemon-reload`
@@ -80,6 +83,11 @@ WantedBy=multi-user.target
 `
 sudo systemctl enable yourscript.service
 `
+
+`
+sudo systemctl disable yourscript.service
+`
+
 
 `
 sudo systemctl start yourscript.service
@@ -92,3 +100,11 @@ sudo systemctl status yourscript.service
 `
 journalctl -u yourscript.service
 `
+
+<b>Review services:</b></br>
+`
+systemctl list-unit-files --type=service --state=enabled
+`</br>
+`
+systemctl list-units --type=service --state=running
+`</br>
