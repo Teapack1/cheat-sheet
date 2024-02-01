@@ -63,6 +63,9 @@ nmcli con up "Wired connection 1"
 
 ## 2  Auto Start:
 
+`sudo chmod +x /home/linux/select_app/selector.py
+`
+
 `sudo nano /etc/systemd/system/yourscript.service
 `
 
