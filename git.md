@@ -1,6 +1,11 @@
 <b>remote:</b> "origin"<br>
 <b>branch:</b> "main"<br>
 
+`-m` amend (add to prev. commit), message `git commit -a -m "Commit message"` <br>
+`-b` create branch `git checkout -b branch-name` <br>
+`-u` for the first push to set the upstream reference `git push -u origin branch-name"` <br>
+`-v` verbose - provides detailed information,  `git remote -v` <br>
+
 ### Setup
 - Set the name that will be attached to your commits and tags:<br>
 `git config --global user.name "Your Name"`
@@ -22,20 +27,28 @@
 -  Show the differences between the staged files and the latest version present:<br>
 `git diff --staged`
 
+-  List all remote repositories:<br>
+`git remote -v`
+
 ### Repos
 - Initialize a local Git repository:<br>
 `git init`
+
+- Used when you've initialized a new local Git repository and want to link it to a remote repository on a service like GitHub, GitLab, or Bitbucket. t's also used when you want to add a second remote to your repository. This could be the case when you've forked someone else's repository (origin) and you also want to keep your fork synchronized with the original repository (upstream). <br>
+`git remote add remote-name https://github.com/username/repository.git
+`
 
 - Clone a repository from a remote source:<br>
 `git clone <url>`
 
 - Add several files to the staging area:<br>
+`git add . `<br>
 `git add *.txt`<br>
 `git add file1.txt file2.txt file3.txt`<br>
 `git add directory_name/*`<br>
 
-- Commit staged changes:<br>
-`git commit -m "Initial commit"`
+- Commit staged changes and amend (joind) them to the most recend commit:<br>
+`git commit -a -m "Initial commit"`
 
 - Fetches and merges changes on the remote server to your working directory.<br>
 `git pull <remote>`
@@ -43,11 +56,14 @@
 -  Pushes all the modified local objects to the remote repository and advances its branches.<br>
 `git push <remote> <branch>`
 
-- Fetch and merge any commits from the tracking remote branch.:<br>
+- Downloads commits, files, and refs from a remote repository into your local repo. It updates your remote-tracking branches (e.g., origin/main). This command fetches the new data from the remote repository but does not integrate any of this new data into your working files or local branches.:<br>
 `git fetch <remote>`
 
 -  Description: Temporarily stores all the modified tracked files.<br>
 `git stash`
+
+-  Reapply stashed changes.<br>
+`git stash pop`
 
 ### Branching
 
@@ -62,6 +78,9 @@
 
 - Merge the specified branch's history into the current one.:<br>
 `git merge <branch-name>`
+
+- used within Git to integrate changes from the main branch into the current branch by reapplying commits on top of the main branch's current state.:<br>
+`git rebase <branch-name>`
 
 ### Local project to existing repo
 
