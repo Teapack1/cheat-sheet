@@ -24,6 +24,9 @@
 - Displays the commit history for the current branch:<br>
 `git log`
 
+- see the files that are currently being tracked by Git in your repository:<br>
+`git ls-files`
+
 - Shows the file differences not yet staged:<br>
 `git diff`
 
@@ -56,6 +59,9 @@
 - Fetches and merges changes on the remote server to your working directory.<br>
 `git pull <remote>`
 
+- useful after initializing a Git repository with an initial commit and then trying to pull from a remote repository that also has its own initial commit, resulting in unrelated histories..<br>
+`git pull origin main --allow-unrelated-histories`
+
 -  Pushes all the modified local objects to the remote repository and advances its branches.<br>
 `git push <remote> <branch>`
 
@@ -72,6 +78,9 @@
 
 - List your branches. A * will appear next to the currently active branch.:<br>
 `git branch`
+
+- s used to rename the current branch to main.:<br>
+`git branch -M main`
 
 - Switches branches:<br>
 `git checkout <branch-name>`
