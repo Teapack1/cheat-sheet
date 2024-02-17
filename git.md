@@ -18,7 +18,7 @@
 
 ### Infos
 
-- Shows the status of changes as untracked, modified, or staged:<br>
+- Shows the status of changes as untracked, modified, or staged for next commit:<br>
 `git status`
 
 - Displays the commit history for the current branch:<br>
@@ -53,6 +53,15 @@
 `git add file1.txt file2.txt file3.txt`<br>
 `git add directory_name/*`<br>
 
+- remove the file from the staging area::<br>
+`git reset HEAD path/to/your/file"`
+
+- First, get a list of all your stashes:<br>
+`git stash list"`
+
+- To see which files were changed in the most recent stash and a summary of the modifications:s:<br>
+`git stash show -p"`
+
 - Commit staged changes and amend (joind) them to the most recend commit:<br>
 `git commit -a -m "Initial commit"`
 
@@ -65,8 +74,25 @@
 -  Pushes all the modified local objects to the remote repository and advances its branches.<br>
 `git push <remote> <branch>`
 
+-  Pushes and replaces everything present on the repo.<br>
+`git push --force <remote> <branch>`
+
 - Downloads commits, files, and refs from a remote repository into your local repo. It updates your remote-tracking branches (e.g., origin/main). This command fetches the new data from the remote repository but does not integrate any of this new data into your working files or local branches.:<br>
 `git fetch <remote>`
+
+  <b>`HEAD~1` refers to the commit before the latest commit, `HEAD~2` refers to two commits before the latest, and so on.</b>
+
+-  If you just want to undo the commit but keep all changes from that commit staged (i.e., ready to be recommitted).<br>
+`git reset --soft HEAD~1`
+
+-  If you prefer to undo the last commit and also unstage the changes (returning them to your working directory).<br>
+`git reset HEAD~1`
+
+-  To completely undo the last commit and discard all changes made in that commit, run.<br>
+`git reset --hard HEAD~1`
+
+-  this will create a new commit that undoes the changes of the last commit.<br>
+`git revert HEAD`
 
 -  Description: Temporarily stores all the modified tracked files.<br>
 `git stash`
