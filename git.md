@@ -45,6 +45,11 @@
 `
 
 - Clone a repository from a remote source:<br>
+`cd <repository-name>`<br>
+`git lfs ls-files`<br>
+`git lfs pull`<br>
+
+- Get LFS files:<br>
 `git clone <url>`
 
 - Add several files to the staging area:<br>
