@@ -1,4 +1,10 @@
 ## Linux Ubuntu
+
+
+To delete a whole folder and its content recursively, you can use:
+
+`sudo rm -rf foldername/`
+
 ## 1  Network:
 Network devices overview:
 
