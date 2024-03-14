@@ -40,6 +40,9 @@
 - Initialize a local Git repository:<br>
 `git init`
 
+- Connect repo to Github<br>
+-> Go to Github and create "new repositary"
+
 - Used when you've initialized a new local Git repository and want to link it to a remote repository on a service like GitHub, GitLab, or Bitbucket. t's also used when you want to add a second remote to your repository. This could be the case when you've forked someone else's repository (origin) and you also want to keep your fork synchronized with the original repository (upstream). <br>
 `git remote add remote-name https://github.com/username/repository.git
 `
