@@ -47,6 +47,10 @@
 `git remote add remote-name https://github.com/username/repository.git
 `
 
+- Unlink the current remote (typically named origin)
+`git remote remove origin
+`
+
 - Clone a repository from a remote source:<br>
 `cd <repository-name>`<br>
 `git lfs ls-files`<br>
@@ -62,10 +66,13 @@
 `git add directory_name/*`<br>
 
 - remove the file from the staging area::<br>
-`git reset HEAD path/to/your/file"`
+`git reset HEAD path/to/your/file`
+
+- Make your local files exactly match the remote repository's state, discarding any local changes.
+`git reset --hard origin/<branch-name>`
 
 - First, get a list of all your stashes:<br>
-`git stash list"`
+`git stash list`
 
 - To see which files were changed in the most recent stash and a summary of the modifications:s:<br>
 `git stash show -p"`
