@@ -51,6 +51,10 @@
 `git remote remove origin
 `
 
+- Change remote URL to a new one
+`git remote set-url origin <new-url>
+`
+
 - Clone a repository from a remote source:<br>
 `cd <repository-name>`<br>
 `git lfs ls-files`<br>
@@ -120,8 +124,11 @@
 - List your branches. A * will appear next to the currently active branch.:<br>
 `git branch`
 
-- s used to rename the current branch to main.:<br>
-`git branch -M main`
+- Rename the current branch to main.:<br>
+`git branch -m main`
+
+- Rename branch "master" to "main".:<br>
+`git branch -m master main`
 
 - Switches branches:<br>
 `git checkout <branch-name>`
