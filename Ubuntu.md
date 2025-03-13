@@ -134,3 +134,8 @@ sudo visudo
 `
 linux ALL=(ALL) NOPASSWD: /bin/systemctl start home.service, /bin/systemctl stop home.service
 `</br>
+
+change keyboard layout:</br>
+`
+setxkbmap cz
+`</br>
