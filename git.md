@@ -4,7 +4,7 @@
 <b>origin</b> is your clone's primary remote repository, usually your own fork or a repository you have direct write access to. <b>upstream</b> is used to designate the original repository from which you forked, allowing you to track changes and synchronize your fork with the source project.
 
 `-m` amend (add to prev. commit), message `git commit -a -m "Commit message"` <br>
-`-b` create branch `git checkout -b branch-name` <br>
+`-b` branch `git checkout -b branch-name` <br>
 `-u` for the first push to set the upstream reference `git push -u origin branch-name"` <br>
 `-v` verbose - provides detailed information,  `git remote -v` <br>
 
@@ -56,12 +56,14 @@
 `
 
 - Clone a repository from a remote source:<br>
+`git clone <url>`
+- Clone particular branch:<br>
+`git -b <branch> clone <url>`
+
+- Get LFS files:<br>
 `cd <repository-name>`<br>
 `git lfs ls-files`<br>
 `git lfs pull`<br>
-
-- Get LFS files:<br>
-`git clone <url>`
 
 - Add several files to the staging area:<br>
 `git add . `<br>
