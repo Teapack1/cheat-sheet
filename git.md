@@ -150,9 +150,6 @@
 - Listing all remote repos.:<br>
 `git branch -r`
 
-- Pull all branches.:<br>
-`git pull --all`
-
 ### Local project to existing repo
 
 - Init:<br>
