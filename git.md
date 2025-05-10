@@ -144,6 +144,15 @@
 - used within Git to integrate changes from the main branch into the current branch by reapplying commits on top of the main branch's current state.:<br>
 `git rebase <branch-name>`
 
+- Push all branches.:<br>
+`git push origin --all`
+
+- Listing all remote repos.:<br>
+`git branch -r`
+
+- Pull all branches.:<br>
+`git pull --all`
+
 ### Local project to existing repo
 
 - Init:<br>
