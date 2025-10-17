@@ -138,6 +138,9 @@
 - create , delete branch:<br>
 `git branch <new-branch-name>` `git branch -d <branch-name>`
 
+- delete branch on remote (Github) :<br>
+`git push origin --delete <branch-name>`
+
 - Merge the specified branch's history into the current one.:<br>
 `git merge <branch-name>`
 
