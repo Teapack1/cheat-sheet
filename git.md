@@ -47,16 +47,18 @@
 `git remote add remote-name https://github.com/username/repository.git
 `
 
-- Unlink the current remote (typically named origin)
-`git remote remove origin
-`
+- Unlink the current remote (typically named origin):<br>
+`git remote remove origin`
 
-- Change remote URL to a new one
-`git remote set-url origin <new-url>
-`
+- Change remote URL to a new one:<br>
+`git remote set-url origin <new-url>`
+
+- Add upstream repo:<br>
+`git remote add upstream <original-repo-url>`
 
 - Clone a repository from a remote source:<br>
 `git clone <url>`
+
 - Clone particular branch:<br>
 `git -b <branch> clone <url>`
 
