@@ -56,6 +56,12 @@
 - Add upstream repo:<br>
 `git remote add upstream <original-repo-url>`
 
+- Fetch all updates from upstream:<br>
+`git fetch upstream`
+
+- Merge the main branch from upstream:<br>
+`git merge upstream/main`
+
 - Clone a repository from a remote source:<br>
 `git clone <url>`
 
