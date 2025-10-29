@@ -71,6 +71,10 @@ Create empty file or update timestamp:
 ### Search
 Find all .c files from current dir:
 `find . -name "*.c"`</br>
+Find files/folders with 'read' anywhere in the name, case insensitive:
+`find . -name "*.c"`</br>
+Find Only directories containing 'log':
+`find ./ -type d -iname "*log*" `</br>
 Find files starting with "read":
 `find /path -type f -name "read*"`</br>
 Find directories starting with "lib":
@@ -93,7 +97,12 @@ Show directory size:
 Show absolute path of file:
 `readlink -f file`</br>
 
-## 2  Network:
+
+## 2) Commands
+When bash sees \ at the end of a line, it treats the next line as part of the same command:
+`\`
+
+## 3) Network
 Network devices overview:
 
 `ip addr`
