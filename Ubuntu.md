@@ -1,11 +1,99 @@
 ## Linux Ubuntu
 
+## 1 System :
 
-To delete a whole folder and its content recursively, you can use:
+### Navigation
+Print current directory path:
+`pwd`</br>
+Current directory:
+`./`</br>
+Root directory:
+`/`</br>
+home directory:
+`cd ~`</br>
+previous directory:
+`cd -`</br>
+List with details (permissions, size, date):
+`ls -l`</br>
+List with human-readable sizes:
+`ls -lh`</br>
+Show hidden files (starting with .):
+`ls -a`</br>
+List by time, newest last:
+`ls -ltr`</br>
+List by size, largest first:
+`ls -lS`</br>
+### Listing, Filtering
+List only .txt files:
+`ls *.txt`</br>
+List files containing "read":
+`ls *read*`</br>
+Filter list output:
+`ls | grep "pattern"`</br>
+Show only Python files:
+`ls -l | grep ".py$"`</br>
+Show directory tree structure:
+`tree`</br>
+Limit tree depth to 2 levels:
+`tree -L 2`</br>
+### File View
+Display entire file:
+`cat file.txt`</br>
+View file page-by-page (q to quit):
+`less file.txt`</br>
+Show first 10 lines:
+`head file.txt`</br>
+Show first 20 lines:
+`head -n 20 file.txt`</br>
+Show last 10 lines:
+`tail file.txt`</br>
+Follow file in real-time (logs):
+`tail -f logfile.log`</br>
+### Directory Management
+Create nested directories:
+`mkdir -p path/to/dir`</br>
+Remove empty directory:
+`rmdir dirname`</br>
+Delete file:
+`rm file.txt`</br>
+Delete directory and contents:
+`rm -r dirname`</br>
+Force delete (use carefully!):
+`rm -rf dirname`</br>
+Copy file:
+`cp file dest`</br>
+Copy directory recursively:
+`cp -r dir1 dir2`</br>
+Rename/move file:
+`mv oldname newname`</br>
+Create empty file or update timestamp:
+`touch file.txt`</br>
+### Search
+Find all .c files from current dir:
+`find . -name "*.c"`</br>
+Find files starting with "read":
+`find /path -type f -name "read*"`</br>
+Find directories starting with "lib":
+`find /path -type d -name "lib*"`</br>
+Search for text in file:
+`grep "text" file.txt`</br>
+Search recursively in directory:
+`grep -r "pattern" /path`</br>
+Case-insensitive search:
+`grep -i "pattern" file`</br>
+Show path to command executable:
+`which command`</br>
+### File Info
+Show file type:
+`file filename`</br>
+Show detailed file information:
+`stat filename`</br>
+Show directory size:
+`du -sh dirname`</br>
+Show absolute path of file:
+`readlink -f file`</br>
 
-`sudo rm -rf foldername/`
-
-## 1  Network:
+## 2  Network:
 Network devices overview:
 
 `ip addr`
@@ -67,7 +155,7 @@ nmcli con down "Wired connection 1"
 nmcli con up "Wired connection 1"
 `
 
-## 2  Auto Start:
+## 3 Auto Start:
 
 `sudo chmod +x /home/linux/select_app/selector.py
 `
@@ -126,7 +214,7 @@ systemctl list-unit-files --type=service --state=enabled
 systemctl list-units --type=service --state=running
 `</br>
 
-### Others
+## 4 Others
 Unrequire password with "sudo" commands:</br>
 `
 sudo visudo
